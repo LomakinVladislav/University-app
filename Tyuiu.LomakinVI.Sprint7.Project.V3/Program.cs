@@ -16,7 +16,7 @@ namespace Tyuiu.LomakinVI.Sprint7.Project.V3
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormMain());
+            Application.Run(new FormMainMenu_LVI());
         }
     }
 }

@@ -1,0 +1,171 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace Tyuiu.LomakinVI.Sprint7.Project.V3
+{
+    public partial class FormMainMenu_LVI : Form
+    {
+
+        //Fields
+        private Button currentButton;
+        private Random random;
+        private int tempIndex;
+        private Form activeForm;
+        
+        //Constructor
+        public FormMainMenu_LVI()
+        {
+            InitializeComponent();
+            random = new Random();
+        }
+
+        //Methods
+
+        private Color SelectThemeColor()
+        {
+            int index = random.Next(ThemeColor.ColorList.Count);
+            while (tempIndex == index)
+            {
+                index = random.Next(ThemeColor.ColorList.Count);
+            }
+            tempIndex = index;
+            string color = ThemeColor.ColorList[index];
+            return ColorTranslator.FromHtml(color);
+        }
+        
+        private void ActivateButton(object btnSender)
+        {
+            if (btnSender != null)
+            {
+                if (currentButton != (Button)btnSender)
+                {
+                    DisableButton();
+                    Color color = SelectThemeColor();
+                    currentButton = (Button)btnSender;
+                    currentButton.BackColor = color;
+                    currentButton.ForeColor = Color.White;
+                    currentButton.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+                }
+            }
+        }
+        
+
+        private void DisableButton()
+        {
+            foreach (Control previousBtn in panelMenu_LVI.Controls)
+            {
+                if (previousBtn.GetType() ==typeof(Button))
+                {
+                    previousBtn.BackColor = Color.FromArgb(51, 51, 76);
+                    previousBtn.ForeColor = Color.Gainsboro;
+                    previousBtn.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+                }
+            }
+        }
+
+        private void OpenChildForm(Form childForm, object btnSender)
+        {
+            if (activeForm != null)
+            {
+                activeForm.Close();
+            }
+            //ActivateButton(btnSender);
+            activeForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            this.panelDesktopPane_LVI.Controls.Add(childForm);
+            this.panelDesktopPane_LVI.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+            labelTitle_LVI.Text = childForm.Text;
+        }
+
+        private void buttonTeachers_LVI_Click(object sender, EventArgs e)
+        {
+            if (sender != null)
+            {
+                if (currentButton != (Button)sender)
+                {
+                    DisableButton();
+                    Color color = ColorTranslator.FromHtml("#5AABB1");
+                    currentButton = (Button)sender;
+                    currentButton.BackColor = color;
+                    currentButton.ForeColor = Color.White;
+                    currentButton.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+                    panelTitleBar_LVI.BackColor = color;
+                    panelLogo_LVI.BackColor = ColorTranslator.FromHtml("#468185");
+                }
+            }
+
+            OpenChildForm(new Forms.FormTeachers_LVI(), sender);
+        }
+
+        private void buttonSubjects_LVI_Click(object sender, EventArgs e)
+        {
+            if (sender != null)
+            {
+                if (currentButton != (Button)sender)
+                {
+                    DisableButton();
+                    Color color = ColorTranslator.FromHtml("#3548A4");
+                    currentButton = (Button)sender;
+                    currentButton.BackColor = color;
+                    currentButton.ForeColor = Color.White;
+                    currentButton.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+                    panelTitleBar_LVI.BackColor = color;
+                    panelLogo_LVI.BackColor = ColorTranslator.FromHtml("#25347A");
+                }
+            }
+
+            OpenChildForm(new Forms.FormSubjects_LVI(), sender);
+        }
+
+        private void buttonTiming_LVI_Click(object sender, EventArgs e)
+        {
+            if (sender != null)
+            {
+                if (currentButton != (Button)sender)
+                {
+                    DisableButton();
+                    Color color = ColorTranslator.FromHtml("#A93673");
+                    currentButton = (Button)sender;
+                    currentButton.BackColor = color;
+                    currentButton.ForeColor = Color.White;
+                    currentButton.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+                    panelTitleBar_LVI.BackColor = color;
+                    panelLogo_LVI.BackColor = ColorTranslator.FromHtml("#892D5E");
+                }
+            }
+
+            OpenChildForm(new Forms.FormTiming_LVI(), sender);
+        }
+
+        private void buttonMap_LVI_Click(object sender, EventArgs e)
+        {
+            if (sender != null)
+            {
+                if (currentButton != (Button)sender)
+                {
+                    DisableButton();
+                    Color color = ColorTranslator.FromHtml("#8949D2");
+                    currentButton = (Button)sender;
+                    currentButton.BackColor = color;
+                    currentButton.ForeColor = Color.White;
+                    currentButton.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+                    panelTitleBar_LVI.BackColor = color;
+                    panelLogo_LVI.BackColor = ColorTranslator.FromHtml("#6C3AA5");
+                }
+            }
+
+            OpenChildForm(new Forms.FormMap_LVI(), sender);
+        }
+    }
+}

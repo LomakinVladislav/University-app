@@ -63,6 +63,26 @@ namespace Tyuiu.LomakinVI.Sprint7.Project.V3.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_карта_30 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-карта-30", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_карта_35 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-карта-35", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_книга_30 {
             get {
                 object obj = ResourceManager.GetObject("icons8-книга-30", resourceCulture);

@@ -46,16 +46,53 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FormMain.cs">
+    <Compile Include="FormMain_LVI.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormMain.Designer.cs">
-      <DependentUpon>FormMain.cs</DependentUpon>
+    <Compile Include="FormMain_LVI.Designer.cs">
+      <DependentUpon>FormMain_LVI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormMap_LVI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormMap_LVI.Designer.cs">
+      <DependentUpon>FormMap_LVI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormSubjects_LVI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormSubjects_LVI.Designer.cs">
+      <DependentUpon>FormSubjects_LVI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormTeachers_LVI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormTeachers_LVI.Designer.cs">
+      <DependentUpon>FormTeachers_LVI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormTiming_LVI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormTiming_LVI.Designer.cs">
+      <DependentUpon>FormTiming_LVI.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FormMain.resx">
-      <DependentUpon>FormMain.cs</DependentUpon>
+    <Compile Include="ThemeColor.cs" />
+    <EmbeddedResource Include="FormMain_LVI.resx">
+      <DependentUpon>FormMain_LVI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormMap_LVI.resx">
+      <DependentUpon>FormMap_LVI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormSubjects_LVI.resx">
+      <DependentUpon>FormSubjects_LVI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormTeachers_LVI.resx">
+      <DependentUpon>FormTeachers_LVI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormTiming_LVI.resx">
+      <DependentUpon>FormTiming_LVI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -133,6 +170,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-книга-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-карта-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-карта-35.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
