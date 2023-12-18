@@ -110,5 +110,29 @@
   <ItemGroup>
     <None Include="Resources\icons8-книги-401.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-человек-40 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-человек-40 %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-человек-40 %282%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-человек-40 %282%292.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-человек-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-человек-35.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-книга-35.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-книга-30.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
