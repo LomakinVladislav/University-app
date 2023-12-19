@@ -46,11 +46,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FormMain_LVI.cs">
+    <Compile Include="FormMainMenu_LVI.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormMain_LVI.Designer.cs">
-      <DependentUpon>FormMain_LVI.cs</DependentUpon>
+    <Compile Include="FormMainMenu_LVI.Designer.cs">
+      <DependentUpon>FormMainMenu_LVI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormInformation_LVI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormInformation_LVI.Designer.cs">
+      <DependentUpon>FormInformation_LVI.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FormMap_LVI.cs">
       <SubType>Form</SubType>
@@ -76,11 +82,20 @@
     <Compile Include="Forms\FormTiming_LVI.Designer.cs">
       <DependentUpon>FormTiming_LVI.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FormTutorial_LVI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormTutorial_LVI.Designer.cs">
+      <DependentUpon>FormTutorial_LVI.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ThemeColor.cs" />
-    <EmbeddedResource Include="FormMain_LVI.resx">
-      <DependentUpon>FormMain_LVI.cs</DependentUpon>
+    <EmbeddedResource Include="FormMainMenu_LVI.resx">
+      <DependentUpon>FormMainMenu_LVI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormInformation_LVI.resx">
+      <DependentUpon>FormInformation_LVI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormMap_LVI.resx">
       <DependentUpon>FormMap_LVI.cs</DependentUpon>
@@ -93,6 +108,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormTiming_LVI.resx">
       <DependentUpon>FormTiming_LVI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormTutorial_LVI.resx">
+      <DependentUpon>FormTutorial_LVI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -176,6 +194,81 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-карта-35.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-крестик-40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-cross-40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-прямоугольник-40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-прямоугольник-25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-прямоугольник-20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-горизонтальная-линия-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-вычитание-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-вычитание-24 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-прямоугольник-20 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Floor_1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Floor_1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Floor_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Floor_3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Floor_5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Floor_6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Floor_7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Floor_8.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Floor_9.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Floor_10.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Floor_11.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Floor_12.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Floor_13.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Floor_14.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Floor_15.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Floor_16.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

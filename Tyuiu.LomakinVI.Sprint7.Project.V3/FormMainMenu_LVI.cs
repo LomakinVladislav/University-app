@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -24,7 +25,16 @@ namespace Tyuiu.LomakinVI.Sprint7.Project.V3
         {
             InitializeComponent();
             random = new Random();
+            buttonCloseChildForm_LVI.Visible = false;
+            this.Text = string.Empty;
+            this.ControlBox = false;
+            //this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
         }
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
 
         //Methods
 
@@ -52,6 +62,7 @@ namespace Tyuiu.LomakinVI.Sprint7.Project.V3
                     currentButton.BackColor = color;
                     currentButton.ForeColor = Color.White;
                     currentButton.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+                    buttonCloseChildForm_LVI.Visible = true;
                 }
             }
         }
@@ -95,13 +106,14 @@ namespace Tyuiu.LomakinVI.Sprint7.Project.V3
                 if (currentButton != (Button)sender)
                 {
                     DisableButton();
-                    Color color = ColorTranslator.FromHtml("#5AABB1");
+                    Color color = ColorTranslator.FromHtml("#5F9EA0");
                     currentButton = (Button)sender;
                     currentButton.BackColor = color;
                     currentButton.ForeColor = Color.White;
                     currentButton.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
                     panelTitleBar_LVI.BackColor = color;
                     panelLogo_LVI.BackColor = ColorTranslator.FromHtml("#468185");
+                    buttonCloseChildForm_LVI.Visible = true;
                 }
             }
 
@@ -122,6 +134,7 @@ namespace Tyuiu.LomakinVI.Sprint7.Project.V3
                     currentButton.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
                     panelTitleBar_LVI.BackColor = color;
                     panelLogo_LVI.BackColor = ColorTranslator.FromHtml("#25347A");
+                    buttonCloseChildForm_LVI.Visible = true;
                 }
             }
 
@@ -142,6 +155,7 @@ namespace Tyuiu.LomakinVI.Sprint7.Project.V3
                     currentButton.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
                     panelTitleBar_LVI.BackColor = color;
                     panelLogo_LVI.BackColor = ColorTranslator.FromHtml("#892D5E");
+                    buttonCloseChildForm_LVI.Visible = true;
                 }
             }
 
@@ -162,10 +176,72 @@ namespace Tyuiu.LomakinVI.Sprint7.Project.V3
                     currentButton.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
                     panelTitleBar_LVI.BackColor = color;
                     panelLogo_LVI.BackColor = ColorTranslator.FromHtml("#6C3AA5");
+                    buttonCloseChildForm_LVI.Visible = true;
                 }
             }
 
             OpenChildForm(new Forms.FormMap_LVI(), sender);
+        }
+
+        private void buttonCloseChildForm_LVI_Click(object sender, EventArgs e)
+        {
+            if (activeForm != null)
+            {
+                activeForm.Close();
+                Reset();
+            }
+        }
+
+        private void Reset()
+        {
+            DisableButton();
+            labelTitle_LVI.Text = "Университет";
+            panelTitleBar_LVI.BackColor = Color.FromArgb(75, 75, 196);
+            panelLogo_LVI.BackColor = Color.FromArgb(34, 34, 51);
+            currentButton = null;
+            buttonCloseChildForm_LVI.Visible = false;
+        }
+
+        private void panelTitleBar_LVI_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void panelLogo_LVI_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void buttonClose_LVI_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void buttonMaximize_LVI_Click(object sender, EventArgs e)
+        {
+            if (WindowState == FormWindowState.Normal)
+                this.WindowState = FormWindowState.Maximized;
+            else
+                this.WindowState = FormWindowState.Normal;
+        }
+
+        private void buttonMinimize_LVI_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void buttonTutorial_LVI_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Forms.FormTutorial_LVI(), sender);
+            buttonCloseChildForm_LVI.Visible = true;
+        }
+
+        private void buttonInformation_LVI_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Forms.FormInformation_LVI(), sender);
+            buttonCloseChildForm_LVI.Visible = true;
         }
     }
 }
