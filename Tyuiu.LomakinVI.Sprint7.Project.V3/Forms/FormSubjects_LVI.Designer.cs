@@ -29,37 +29,82 @@ namespace Tyuiu.LomakinVI.Sprint7.Project.V3.Forms
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.dataGridViewSubjects = new System.Windows.Forms.DataGridView();
+            this.Numbear = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Subject = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Hours = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Teacher = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button1 = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSubjects)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // dataGridViewSubjects
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(319, 181);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(120, 37);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Subjects";
+            this.dataGridViewSubjects.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewSubjects.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Numbear,
+            this.Subject,
+            this.Hours,
+            this.Teacher});
+            this.dataGridViewSubjects.Location = new System.Drawing.Point(23, 64);
+            this.dataGridViewSubjects.Name = "dataGridViewSubjects";
+            this.dataGridViewSubjects.RowHeadersVisible = false;
+            this.dataGridViewSubjects.RowTemplate.Height = 23;
+            this.dataGridViewSubjects.Size = new System.Drawing.Size(481, 184);
+            this.dataGridViewSubjects.TabIndex = 0;
+            // 
+            // Numbear
+            // 
+            this.Numbear.HeaderText = "№";
+            this.Numbear.Name = "Numbear";
+            // 
+            // Subject
+            // 
+            this.Subject.HeaderText = "Дисциплина";
+            this.Subject.Name = "Subject";
+            // 
+            // Hours
+            // 
+            this.Hours.HeaderText = "Часы";
+            this.Hours.Name = "Hours";
+            // 
+            // Teacher
+            // 
+            this.Teacher.HeaderText = "Преподаватель";
+            this.Teacher.Name = "Teacher";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(584, 98);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // FormSubjects_LVI
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1067, 637);
-            this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.dataGridViewSubjects);
             this.Name = "FormSubjects_LVI";
             this.Text = "Предметы";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSubjects)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridView dataGridViewSubjects;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Numbear;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Subject;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Hours;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Teacher;
+        private System.Windows.Forms.Button button1;
     }
 }

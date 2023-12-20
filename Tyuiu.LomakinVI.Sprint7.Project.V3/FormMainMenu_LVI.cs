@@ -243,5 +243,26 @@ namespace Tyuiu.LomakinVI.Sprint7.Project.V3
             OpenChildForm(new Forms.FormInformation_LVI(), sender);
             buttonCloseChildForm_LVI.Visible = true;
         }
+
+        private void buttonPhotos_LVI_Click(object sender, EventArgs e)
+        {
+            if (sender != null)
+            {
+                if (currentButton != (Button)sender)
+                {
+                    DisableButton();
+                    Color color = ColorTranslator.FromHtml("#a11a10");
+                    currentButton = (Button)sender;
+                    currentButton.BackColor = color;
+                    currentButton.ForeColor = Color.White;
+                    currentButton.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+                    panelTitleBar_LVI.BackColor = color;
+                    panelLogo_LVI.BackColor = ColorTranslator.FromHtml("#85150d");
+                    buttonCloseChildForm_LVI.Visible = true;
+                }
+            }
+
+            OpenChildForm(new Forms.FormPhoto_LVI(), sender);
+        }
     }
 }

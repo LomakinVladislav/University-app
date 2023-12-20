@@ -106,5 +106,18 @@ namespace Tyuiu.LomakinVI.Sprint7.Project.V3.Forms
                     break;
             }
         }
+
+        private void pictureBoxFloor_LVI_Click(object sender, EventArgs e)
+        {
+            if (pictureBoxFloor_LVI.Image != null)
+            {
+                if (pictureBoxFloor_LVI.Dock == DockStyle.Fill)
+                {
+                    pictureBoxFloor_LVI.Dock = DockStyle.None;
+                }
+                else
+                    pictureBoxFloor_LVI.Dock = DockStyle.Fill;
+            }
+        }
     }
 }

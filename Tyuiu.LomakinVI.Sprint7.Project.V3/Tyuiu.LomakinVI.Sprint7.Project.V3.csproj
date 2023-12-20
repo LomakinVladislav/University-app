@@ -64,6 +64,12 @@
     <Compile Include="Forms\FormMap_LVI.Designer.cs">
       <DependentUpon>FormMap_LVI.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FormPhoto_LVI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormPhoto_LVI.Designer.cs">
+      <DependentUpon>FormPhoto_LVI.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FormSubjects_LVI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,6 +105,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormMap_LVI.resx">
       <DependentUpon>FormMap_LVI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormPhoto_LVI.resx">
+      <DependentUpon>FormPhoto_LVI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormSubjects_LVI.resx">
       <DependentUpon>FormSubjects_LVI.cs</DependentUpon>

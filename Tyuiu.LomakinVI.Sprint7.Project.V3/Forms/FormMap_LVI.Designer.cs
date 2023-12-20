@@ -92,13 +92,17 @@ namespace Tyuiu.LomakinVI.Sprint7.Project.V3.Forms
             // 
             // pictureBoxFloor_LVI
             // 
-            this.pictureBoxFloor_LVI.Location = new System.Drawing.Point(305, 136);
+            this.pictureBoxFloor_LVI.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBoxFloor_LVI.Location = new System.Drawing.Point(272, 136);
             this.pictureBoxFloor_LVI.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBoxFloor_LVI.Name = "pictureBoxFloor_LVI";
-            this.pictureBoxFloor_LVI.Size = new System.Drawing.Size(618, 391);
+            this.pictureBoxFloor_LVI.Size = new System.Drawing.Size(651, 376);
             this.pictureBoxFloor_LVI.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxFloor_LVI.TabIndex = 4;
             this.pictureBoxFloor_LVI.TabStop = false;
+            this.pictureBoxFloor_LVI.Click += new System.EventHandler(this.pictureBoxFloor_LVI_Click);
             // 
             // FormMap_LVI
             // 

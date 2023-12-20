@@ -67,7 +67,7 @@ namespace Tyuiu.LomakinVI.Sprint7.Project.V3
             this.panelMenu_LVI.Controls.Add(this.panelLogo_LVI);
             this.panelMenu_LVI.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu_LVI.Location = new System.Drawing.Point(0, 0);
-            this.panelMenu_LVI.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelMenu_LVI.Margin = new System.Windows.Forms.Padding(2);
             this.panelMenu_LVI.Name = "panelMenu_LVI";
             this.panelMenu_LVI.Size = new System.Drawing.Size(206, 571);
             this.panelMenu_LVI.TabIndex = 0;
@@ -83,7 +83,7 @@ namespace Tyuiu.LomakinVI.Sprint7.Project.V3
             this.buttonPhotos_LVI.Image = global::Tyuiu.LomakinVI.Sprint7.Project.V3.Properties.Resources.icons8_карта_35;
             this.buttonPhotos_LVI.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonPhotos_LVI.Location = new System.Drawing.Point(0, 260);
-            this.buttonPhotos_LVI.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonPhotos_LVI.Margin = new System.Windows.Forms.Padding(2);
             this.buttonPhotos_LVI.Name = "buttonPhotos_LVI";
             this.buttonPhotos_LVI.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.buttonPhotos_LVI.Size = new System.Drawing.Size(206, 45);
@@ -91,6 +91,7 @@ namespace Tyuiu.LomakinVI.Sprint7.Project.V3
             this.buttonPhotos_LVI.Text = "   Фото";
             this.buttonPhotos_LVI.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonPhotos_LVI.UseVisualStyleBackColor = true;
+            this.buttonPhotos_LVI.Click += new System.EventHandler(this.buttonPhotos_LVI_Click);
             // 
             // buttonMap_LVI
             // 
@@ -103,7 +104,7 @@ namespace Tyuiu.LomakinVI.Sprint7.Project.V3
             this.buttonMap_LVI.Image = global::Tyuiu.LomakinVI.Sprint7.Project.V3.Properties.Resources.icons8_карта_35;
             this.buttonMap_LVI.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonMap_LVI.Location = new System.Drawing.Point(0, 215);
-            this.buttonMap_LVI.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonMap_LVI.Margin = new System.Windows.Forms.Padding(2);
             this.buttonMap_LVI.Name = "buttonMap_LVI";
             this.buttonMap_LVI.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.buttonMap_LVI.Size = new System.Drawing.Size(206, 45);
@@ -123,7 +124,7 @@ namespace Tyuiu.LomakinVI.Sprint7.Project.V3
             this.buttonTiming_LVI.Image = global::Tyuiu.LomakinVI.Sprint7.Project.V3.Properties.Resources.icons8_часы_30;
             this.buttonTiming_LVI.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonTiming_LVI.Location = new System.Drawing.Point(0, 170);
-            this.buttonTiming_LVI.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonTiming_LVI.Margin = new System.Windows.Forms.Padding(2);
             this.buttonTiming_LVI.Name = "buttonTiming_LVI";
             this.buttonTiming_LVI.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.buttonTiming_LVI.Size = new System.Drawing.Size(206, 45);
@@ -143,7 +144,7 @@ namespace Tyuiu.LomakinVI.Sprint7.Project.V3
             this.buttonSubjects_LVI.Image = global::Tyuiu.LomakinVI.Sprint7.Project.V3.Properties.Resources.icons8_книга_30;
             this.buttonSubjects_LVI.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonSubjects_LVI.Location = new System.Drawing.Point(0, 125);
-            this.buttonSubjects_LVI.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonSubjects_LVI.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSubjects_LVI.Name = "buttonSubjects_LVI";
             this.buttonSubjects_LVI.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
             this.buttonSubjects_LVI.Size = new System.Drawing.Size(206, 45);
@@ -163,7 +164,7 @@ namespace Tyuiu.LomakinVI.Sprint7.Project.V3
             this.buttonTeachers_LVI.Image = global::Tyuiu.LomakinVI.Sprint7.Project.V3.Properties.Resources.icons8_человек_35;
             this.buttonTeachers_LVI.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonTeachers_LVI.Location = new System.Drawing.Point(0, 80);
-            this.buttonTeachers_LVI.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonTeachers_LVI.Margin = new System.Windows.Forms.Padding(2);
             this.buttonTeachers_LVI.Name = "buttonTeachers_LVI";
             this.buttonTeachers_LVI.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
             this.buttonTeachers_LVI.Size = new System.Drawing.Size(206, 45);
@@ -178,7 +179,7 @@ namespace Tyuiu.LomakinVI.Sprint7.Project.V3
             this.panelLogo_LVI.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(51)))));
             this.panelLogo_LVI.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo_LVI.Location = new System.Drawing.Point(0, 0);
-            this.panelLogo_LVI.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelLogo_LVI.Margin = new System.Windows.Forms.Padding(2);
             this.panelLogo_LVI.Name = "panelLogo_LVI";
             this.panelLogo_LVI.Size = new System.Drawing.Size(206, 80);
             this.panelLogo_LVI.TabIndex = 0;
@@ -194,7 +195,7 @@ namespace Tyuiu.LomakinVI.Sprint7.Project.V3
             this.panelTitleBar_LVI.Controls.Add(this.labelTitle_LVI);
             this.panelTitleBar_LVI.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTitleBar_LVI.Location = new System.Drawing.Point(206, 0);
-            this.panelTitleBar_LVI.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelTitleBar_LVI.Margin = new System.Windows.Forms.Padding(2);
             this.panelTitleBar_LVI.Name = "panelTitleBar_LVI";
             this.panelTitleBar_LVI.Size = new System.Drawing.Size(851, 80);
             this.panelTitleBar_LVI.TabIndex = 1;
@@ -211,7 +212,7 @@ namespace Tyuiu.LomakinVI.Sprint7.Project.V3
             this.buttonClose_LVI.ForeColor = System.Drawing.Color.White;
             this.buttonClose_LVI.Image = global::Tyuiu.LomakinVI.Sprint7.Project.V3.Properties.Resources.icons8_cross_40;
             this.buttonClose_LVI.Location = new System.Drawing.Point(822, 5);
-            this.buttonClose_LVI.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonClose_LVI.Margin = new System.Windows.Forms.Padding(2);
             this.buttonClose_LVI.Name = "buttonClose_LVI";
             this.buttonClose_LVI.Size = new System.Drawing.Size(26, 19);
             this.buttonClose_LVI.TabIndex = 4;
@@ -229,7 +230,7 @@ namespace Tyuiu.LomakinVI.Sprint7.Project.V3
             this.buttonMaximize_LVI.ForeColor = System.Drawing.Color.White;
             this.buttonMaximize_LVI.Image = global::Tyuiu.LomakinVI.Sprint7.Project.V3.Properties.Resources.icons8_прямоугольник_20__1_;
             this.buttonMaximize_LVI.Location = new System.Drawing.Point(798, 3);
-            this.buttonMaximize_LVI.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonMaximize_LVI.Margin = new System.Windows.Forms.Padding(2);
             this.buttonMaximize_LVI.Name = "buttonMaximize_LVI";
             this.buttonMaximize_LVI.Size = new System.Drawing.Size(22, 22);
             this.buttonMaximize_LVI.TabIndex = 3;
@@ -246,7 +247,7 @@ namespace Tyuiu.LomakinVI.Sprint7.Project.V3
             this.buttonMinimize_LVI.ForeColor = System.Drawing.Color.White;
             this.buttonMinimize_LVI.Image = global::Tyuiu.LomakinVI.Sprint7.Project.V3.Properties.Resources.icons8_вычитание_24__1_;
             this.buttonMinimize_LVI.Location = new System.Drawing.Point(768, 2);
-            this.buttonMinimize_LVI.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonMinimize_LVI.Margin = new System.Windows.Forms.Padding(2);
             this.buttonMinimize_LVI.Name = "buttonMinimize_LVI";
             this.buttonMinimize_LVI.Size = new System.Drawing.Size(26, 24);
             this.buttonMinimize_LVI.TabIndex = 2;
@@ -260,7 +261,7 @@ namespace Tyuiu.LomakinVI.Sprint7.Project.V3
             this.buttonCloseChildForm_LVI.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCloseChildForm_LVI.Image = global::Tyuiu.LomakinVI.Sprint7.Project.V3.Properties.Resources.icons8_cross_40;
             this.buttonCloseChildForm_LVI.Location = new System.Drawing.Point(0, 0);
-            this.buttonCloseChildForm_LVI.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonCloseChildForm_LVI.Margin = new System.Windows.Forms.Padding(2);
             this.buttonCloseChildForm_LVI.Name = "buttonCloseChildForm_LVI";
             this.buttonCloseChildForm_LVI.Size = new System.Drawing.Size(69, 80);
             this.buttonCloseChildForm_LVI.TabIndex = 1;
@@ -286,7 +287,7 @@ namespace Tyuiu.LomakinVI.Sprint7.Project.V3
             this.S.Controls.Add(this.panelDesktopPane_LVI);
             this.S.Dock = System.Windows.Forms.DockStyle.Fill;
             this.S.Location = new System.Drawing.Point(206, 80);
-            this.S.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.S.Margin = new System.Windows.Forms.Padding(2);
             this.S.Name = "S";
             this.S.Size = new System.Drawing.Size(851, 491);
             this.S.TabIndex = 2;
@@ -378,13 +379,14 @@ namespace Tyuiu.LomakinVI.Sprint7.Project.V3
             // 
             // FormMainMenu_LVI
             // 
+            this.AcceptButton = this.buttonClose_LVI;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1057, 571);
             this.Controls.Add(this.S);
             this.Controls.Add(this.panelTitleBar_LVI);
             this.Controls.Add(this.panelMenu_LVI);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MinimumSize = new System.Drawing.Size(1073, 610);
             this.Name = "FormMainMenu_LVI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
