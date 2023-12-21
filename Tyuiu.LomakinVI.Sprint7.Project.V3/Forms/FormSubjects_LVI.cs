@@ -49,36 +49,6 @@ namespace Tyuiu.LomakinVI.Sprint7.Project.V3.Forms
                     dataGridViewSubjects.Rows[r].Cells[c].Value = arrayValues[r, c];
                 }
             }
-
-            /*
-
-            string path_tech = $@"{Directory.GetCurrentDirectory()}\Files\Subjects_teach.csv";
-
-            string fileData_tech = File.ReadAllText(path_tech);
-            fileData_tech = fileData_tech.Replace('\n', '\r');
-            string[] lines_tech = fileData_tech.Split(new char[] { '\r' }, StringSplitOptions.RemoveEmptyEntries);
-
-            int rows_tech = lines_tech.Length;
-            int columns_tech = lines_tech[0].Split(';').Length;
-            string[,] arrayValues_tech = new string[rows_tech, columns_tech];
-
-            for (int r = 0; r < rows_tech; r++)
-            {
-                string[] line_r = lines_tech[r].Split(';');
-                for (int c = 0; c < columns_tech; c++)
-                {
-                    arrayValues_tech[r, c] = Convert.ToString(line_r[c]);
-                }
-            }
-
-            for (int r = 0; r < rows_tech; r++)
-            {
-                for (int c = 0; c < columns_tech; c++)
-                {
-                    dataGridViewSubjects.Rows[r].Cells[c+3].Value = arrayValues_tech[r, c];
-                }
-            }
-            */
         }
     }
 }

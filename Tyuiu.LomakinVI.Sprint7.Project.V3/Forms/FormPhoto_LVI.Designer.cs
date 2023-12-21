@@ -29,33 +29,42 @@ namespace Tyuiu.LomakinVI.Sprint7.Project.V3.Forms
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panelDescription_LVI = new System.Windows.Forms.Panel();
+            this.textBoxDescription_LVI = new System.Windows.Forms.TextBox();
+            this.pictureBoxUpRow1_LVI = new System.Windows.Forms.PictureBox();
+            this.panelDescription_LVI.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUpRow1_LVI)).BeginInit();
             this.SuspendLayout();
             // 
-            // panel1
+            // panelDescription_LVI
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Location = new System.Drawing.Point(73, 69);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(653, 369);
-            this.panel1.TabIndex = 0;
+            this.panelDescription_LVI.Controls.Add(this.textBoxDescription_LVI);
+            this.panelDescription_LVI.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panelDescription_LVI.Location = new System.Drawing.Point(0, 355);
+            this.panelDescription_LVI.Name = "panelDescription_LVI";
+            this.panelDescription_LVI.Size = new System.Drawing.Size(800, 95);
+            this.panelDescription_LVI.TabIndex = 0;
             // 
-            // pictureBox1
+            // textBoxDescription_LVI
             // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::Tyuiu.LomakinVI.Sprint7.Project.V3.Properties.Resources.Floor_1;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(653, 369);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.textBoxDescription_LVI.BackColor = System.Drawing.Color.White;
+            this.textBoxDescription_LVI.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxDescription_LVI.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBoxDescription_LVI.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxDescription_LVI.Location = new System.Drawing.Point(0, 0);
+            this.textBoxDescription_LVI.Multiline = true;
+            this.textBoxDescription_LVI.Name = "textBoxDescription_LVI";
+            this.textBoxDescription_LVI.ReadOnly = true;
+            this.textBoxDescription_LVI.Size = new System.Drawing.Size(800, 95);
+            this.textBoxDescription_LVI.TabIndex = 0;
+            // 
+            // pictureBoxUpRow1_LVI
+            // 
+            this.pictureBoxUpRow1_LVI.Location = new System.Drawing.Point(30, 39);
+            this.pictureBoxUpRow1_LVI.Name = "pictureBoxUpRow1_LVI";
+            this.pictureBoxUpRow1_LVI.Size = new System.Drawing.Size(154, 120);
+            this.pictureBoxUpRow1_LVI.TabIndex = 1;
+            this.pictureBoxUpRow1_LVI.TabStop = false;
             // 
             // FormPhoto_LVI
             // 
@@ -63,18 +72,21 @@ namespace Tyuiu.LomakinVI.Sprint7.Project.V3.Forms
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pictureBoxUpRow1_LVI);
+            this.Controls.Add(this.panelDescription_LVI);
             this.Name = "FormPhoto_LVI";
             this.Text = "Фото университета";
-            this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panelDescription_LVI.ResumeLayout(false);
+            this.panelDescription_LVI.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUpRow1_LVI)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel panelDescription_LVI;
+        private System.Windows.Forms.TextBox textBoxDescription_LVI;
+        private System.Windows.Forms.PictureBox pictureBoxUpRow1_LVI;
     }
 }
