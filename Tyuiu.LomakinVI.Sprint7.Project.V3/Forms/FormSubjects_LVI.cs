@@ -20,60 +20,65 @@ namespace Tyuiu.LomakinVI.Sprint7.Project.V3.Forms
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int len = 0;
-            string path = $@"{Directory.GetCurrentDirectory()}\Files\Jopa.csv";
-            using (StreamReader reader = new StreamReader(path))
+            string path = $@"{Directory.GetCurrentDirectory()}\Files\Subjects.csv";
+
+            string fileData = File.ReadAllText(path);
+            fileData = fileData.Replace('\n', '\r');
+            string[] lines = fileData.Split(new char[] { '\r' }, StringSplitOptions.RemoveEmptyEntries);
+
+            int rows = lines.Length;
+            int columns = lines[0].Split(',').Length;
+            string[,] arrayValues = new string[rows, columns];
+
+            for (int r = 0; r < rows; r++)
             {
-                string line;
-                while ((line = reader.ReadLine()) != null)
+                string[] line_r = lines[r].Split(',');
+                for (int c = 0; c < columns; c++)
                 {
-                    len++;
+                    arrayValues[r, c] = Convert.ToString(line_r[c]);
                 }
             }
 
-            double[] numsArray = new double[len];
-
-            int index = 0;
-
-            using (StreamReader reader = new StreamReader(path))
-            {
-                string line;
-                while ((line = reader.ReadLine()) != null)
-                {
-                    numsArray[index] = Convert.ToDouble(line);
-                    index++;
-                }
-            }
-
-
-            /*
-            StreamReader reader = null;
-            if (File.Exists(path))
-            {
-                reader = new StreamReader(File.OpenRead(path));
-
-                while (!reader.EndOfStream)
-                {
-                    var line = reader.ReadLine();
-                    var values = line.Split(',');
-                }
-
-                reader.Close();
-            }
-            else
-            {
-                MessageBox.Show("Файл не существует", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            */
-
-            //int[,] matrix = { { 112, 11, 11, 12 }, { 54, 23, 54, 12 } };
-            int rows = numsArray.GetLength(0);
+            dataGridViewSubjects.ColumnCount = columns;
             dataGridViewSubjects.RowCount = rows;
 
-            for (int i = 0; i < rows; i++)
+            for (int r = 0; r < rows; r++)
             {
-                dataGridViewSubjects.Rows[i].Cells[0].Value = Convert.ToString(numsArray[i]);
+                for (int c = 0; c < columns; c++)
+                {
+                    dataGridViewSubjects.Rows[r].Cells[c].Value = arrayValues[r, c];
+                }
             }
+
+            /*
+
+            string path_tech = $@"{Directory.GetCurrentDirectory()}\Files\Subjects_teach.csv";
+
+            string fileData_tech = File.ReadAllText(path_tech);
+            fileData_tech = fileData_tech.Replace('\n', '\r');
+            string[] lines_tech = fileData_tech.Split(new char[] { '\r' }, StringSplitOptions.RemoveEmptyEntries);
+
+            int rows_tech = lines_tech.Length;
+            int columns_tech = lines_tech[0].Split(';').Length;
+            string[,] arrayValues_tech = new string[rows_tech, columns_tech];
+
+            for (int r = 0; r < rows_tech; r++)
+            {
+                string[] line_r = lines_tech[r].Split(';');
+                for (int c = 0; c < columns_tech; c++)
+                {
+                    arrayValues_tech[r, c] = Convert.ToString(line_r[c]);
+                }
+            }
+
+            for (int r = 0; r < rows_tech; r++)
+            {
+                for (int c = 0; c < columns_tech; c++)
+                {
+                    dataGridViewSubjects.Rows[r].Cells[c+3].Value = arrayValues_tech[r, c];
+                }
+            }
+            */
         }
     }
 }
