@@ -279,5 +279,26 @@
   <ItemGroup>
     <None Include="Resources\Floor_16.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\University 7 block outside.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\University 7 block inside.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stroitelny_institut_TIU.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Priemnaya komissia.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Foreign students.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hostel.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hostel1.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

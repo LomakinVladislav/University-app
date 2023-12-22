@@ -213,6 +213,36 @@ namespace Tyuiu.LomakinVI.Sprint7.Project.V3.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Foreign_students {
+            get {
+                object obj = ResourceManager.GetObject("Foreign students", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Hostel {
+            get {
+                object obj = ResourceManager.GetObject("Hostel", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Hostel1 {
+            get {
+                object obj = ResourceManager.GetObject("Hostel1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_cross_40 {
             get {
                 object obj = ResourceManager.GetObject("icons8-cross-40", resourceCulture);
@@ -476,6 +506,46 @@ namespace Tyuiu.LomakinVI.Sprint7.Project.V3.Properties {
         internal static System.Drawing.Bitmap Offical_photo {
             get {
                 object obj = ResourceManager.GetObject("Offical_photo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Priemnaya_komissia {
+            get {
+                object obj = ResourceManager.GetObject("Priemnaya komissia", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Stroitelny_institut_TIU {
+            get {
+                object obj = ResourceManager.GetObject("Stroitelny_institut_TIU", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap University_7_block_inside {
+            get {
+                object obj = ResourceManager.GetObject("University 7 block inside", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap University_7_block_outside {
+            get {
+                object obj = ResourceManager.GetObject("University 7 block outside", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

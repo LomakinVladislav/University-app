@@ -98,7 +98,7 @@ namespace Tyuiu.LomakinVI.Sprint7.Project.V3.Forms
             this.pictureBoxFloor_LVI.Location = new System.Drawing.Point(272, 136);
             this.pictureBoxFloor_LVI.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBoxFloor_LVI.Name = "pictureBoxFloor_LVI";
-            this.pictureBoxFloor_LVI.Size = new System.Drawing.Size(651, 376);
+            this.pictureBoxFloor_LVI.Size = new System.Drawing.Size(552, 290);
             this.pictureBoxFloor_LVI.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxFloor_LVI.TabIndex = 4;
             this.pictureBoxFloor_LVI.TabStop = false;
@@ -109,7 +109,7 @@ namespace Tyuiu.LomakinVI.Sprint7.Project.V3.Forms
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(934, 538);
+            this.ClientSize = new System.Drawing.Size(835, 452);
             this.Controls.Add(this.pictureBoxFloor_LVI);
             this.Controls.Add(this.comboBoxChooseFloor_LVI);
             this.Controls.Add(this.textBox1);
