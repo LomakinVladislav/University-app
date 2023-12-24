@@ -300,5 +300,23 @@
   <ItemGroup>
     <None Include="Resources\Hostel1.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-стопка-фотографий-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-изображение-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-изображение-35.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-изображение-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shuba_Kak_Y_Ryana_Goslinga_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shuba_Kak_Y_Ryana_Goslinga.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

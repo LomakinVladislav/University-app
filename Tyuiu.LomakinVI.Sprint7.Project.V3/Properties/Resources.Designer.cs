@@ -283,6 +283,36 @@ namespace Tyuiu.LomakinVI.Sprint7.Project.V3.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_изображение_30 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-изображение-30", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_изображение_32 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-изображение-32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_изображение_35 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-изображение-35", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_карта_30 {
             get {
                 object obj = ResourceManager.GetObject("icons8-карта-30", resourceCulture);
@@ -413,6 +443,16 @@ namespace Tyuiu.LomakinVI.Sprint7.Project.V3.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_стопка_фотографий_24 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-стопка-фотографий-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_часы_30 {
             get {
                 object obj = ResourceManager.GetObject("icons8-часы-30", resourceCulture);
@@ -516,6 +556,26 @@ namespace Tyuiu.LomakinVI.Sprint7.Project.V3.Properties {
         internal static System.Drawing.Bitmap Priemnaya_komissia {
             get {
                 object obj = ResourceManager.GetObject("Priemnaya komissia", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Shuba_Kak_Y_Ryana_Goslinga {
+            get {
+                object obj = ResourceManager.GetObject("Shuba_Kak_Y_Ryana_Goslinga", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Shuba_Kak_Y_Ryana_Goslinga_2 {
+            get {
+                object obj = ResourceManager.GetObject("Shuba_Kak_Y_Ryana_Goslinga_2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

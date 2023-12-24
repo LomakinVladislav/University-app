@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using Tyuiu.LomakinVI.Sprint7.Project.V3.Lib;
 
 namespace Tyuiu.LomakinVI.Sprint7.Project.V3.Forms
 {
@@ -17,37 +18,58 @@ namespace Tyuiu.LomakinVI.Sprint7.Project.V3.Forms
         {
             InitializeComponent();
         }
+        DataService ds = new DataService();
 
-        private void button1_Click(object sender, EventArgs e)
+        private void buttonDone_LVI_Click(object sender, EventArgs e)
         {
-            string path = $@"{Directory.GetCurrentDirectory()}\Files\Subjects.csv";
-
-            string fileData = File.ReadAllText(path);
-            fileData = fileData.Replace('\n', '\r');
-            string[] lines = fileData.Split(new char[] { '\r' }, StringSplitOptions.RemoveEmptyEntries);
-
-            int rows = lines.Length;
-            int columns = lines[0].Split(',').Length;
-            string[,] arrayValues = new string[rows, columns];
-
-            for (int r = 0; r < rows; r++)
+            try
             {
-                string[] line_r = lines[r].Split(',');
-                for (int c = 0; c < columns; c++)
+                string path;
+                switch (comboBoxChooseDirection_LVI.SelectedIndex)
                 {
-                    arrayValues[r, c] = Convert.ToString(line_r[c]);
+                    case 0:
+                        path = $@"{Directory.GetCurrentDirectory()}\Files\Subjects_Math.csv";
+                        break;
+                    case 1:
+                        path = $@"{Directory.GetCurrentDirectory()}\Files\Subjects_Inf.csv";
+                        break;
+                    case 2:
+                        path = $@"{Directory.GetCurrentDirectory()}\Files\Subjects_Sport.csv";
+                        break;
+                    case 3:
+                        path = $@"{Directory.GetCurrentDirectory()}\Files\Subjects_Gum.csv";
+                        break;
+                    case 4:
+                        path = $@"{Directory.GetCurrentDirectory()}\Files\Subjects_Project.csv";
+                        break;
+                    case 5:
+                        path = $@"{Directory.GetCurrentDirectory()}\Files\Subjects_All.csv";
+                        break;
+                    default:
+                        path = $@"{Directory.GetCurrentDirectory()}\Files\Subjects_All.csv";
+                        break;
+                }
+
+
+                string[,] arrayValues = ds.LoadFromData(path);
+
+                int rows = arrayValues.GetLength(0);
+                int columns = arrayValues.GetLength(1);
+
+                dataGridViewSubjects_LVI.ColumnCount = columns;
+                dataGridViewSubjects_LVI.RowCount = rows;
+
+                for (int r = 0; r < rows; r++)
+                {
+                    for (int c = 0; c < columns; c++)
+                    {
+                        dataGridViewSubjects_LVI.Rows[r].Cells[c].Value = arrayValues[r, c];
+                    }
                 }
             }
-
-            dataGridViewSubjects.ColumnCount = columns;
-            dataGridViewSubjects.RowCount = rows;
-
-            for (int r = 0; r < rows; r++)
+            catch 
             {
-                for (int c = 0; c < columns; c++)
-                {
-                    dataGridViewSubjects.Rows[r].Cells[c].Value = arrayValues[r, c];
-                }
+                MessageBox.Show("Исходный файл открыт в стороннем приложении!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

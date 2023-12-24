@@ -8,6 +8,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Tyuiu.LomakinVI.Sprint7.Project.V3
 {
@@ -50,6 +51,7 @@ namespace Tyuiu.LomakinVI.Sprint7.Project.V3
             return ColorTranslator.FromHtml(color);
         }
         
+        /*
         private void ActivateButton(object btnSender)
         {
             if (btnSender != null)
@@ -66,7 +68,7 @@ namespace Tyuiu.LomakinVI.Sprint7.Project.V3
                 }
             }
         }
-        
+        */
 
         private void DisableButton()
         {
@@ -234,14 +236,17 @@ namespace Tyuiu.LomakinVI.Sprint7.Project.V3
 
         private void buttonTutorial_LVI_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Forms.FormTutorial_LVI(), sender);
-            buttonCloseChildForm_LVI.Visible = true;
+            string path = $@"{Directory.GetCurrentDirectory()}\Files\User's_guide.docx";
+            System.Diagnostics.Process txt = new System.Diagnostics.Process();
+            txt.StartInfo.FileName = "WINWORD.EXE";
+            txt.StartInfo.Arguments = path;
+            txt.Start();
         }
 
         private void buttonInformation_LVI_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Forms.FormInformation_LVI(), sender);
-            buttonCloseChildForm_LVI.Visible = true;
+            Forms.FormInformation_LVI formAbout = new Forms.FormInformation_LVI();
+            formAbout.ShowDialog();
         }
 
         private void buttonPhotos_LVI_Click(object sender, EventArgs e)

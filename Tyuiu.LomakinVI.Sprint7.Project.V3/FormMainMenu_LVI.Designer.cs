@@ -29,6 +29,7 @@ namespace Tyuiu.LomakinVI.Sprint7.Project.V3
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMainMenu_LVI));
             this.panelMenu_LVI = new System.Windows.Forms.Panel();
             this.buttonPhotos_LVI = new System.Windows.Forms.Button();
@@ -50,6 +51,7 @@ namespace Tyuiu.LomakinVI.Sprint7.Project.V3
             this.labelMenu_LVI = new System.Windows.Forms.Label();
             this.textBoxDesroption_LVI = new System.Windows.Forms.TextBox();
             this.labelWelcomeHome_LVI = new System.Windows.Forms.Label();
+            this.toolTipInfo_LVI = new System.Windows.Forms.ToolTip(this.components);
             this.panelMenu_LVI.SuspendLayout();
             this.panelTitleBar_LVI.SuspendLayout();
             this.S.SuspendLayout();
@@ -80,16 +82,17 @@ namespace Tyuiu.LomakinVI.Sprint7.Project.V3
             this.buttonPhotos_LVI.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonPhotos_LVI.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonPhotos_LVI.ForeColor = System.Drawing.Color.Gainsboro;
-            this.buttonPhotos_LVI.Image = global::Tyuiu.LomakinVI.Sprint7.Project.V3.Properties.Resources.icons8_карта_35;
+            this.buttonPhotos_LVI.Image = global::Tyuiu.LomakinVI.Sprint7.Project.V3.Properties.Resources.icons8_изображение_32;
             this.buttonPhotos_LVI.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonPhotos_LVI.Location = new System.Drawing.Point(0, 260);
             this.buttonPhotos_LVI.Margin = new System.Windows.Forms.Padding(2);
             this.buttonPhotos_LVI.Name = "buttonPhotos_LVI";
-            this.buttonPhotos_LVI.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.buttonPhotos_LVI.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
             this.buttonPhotos_LVI.Size = new System.Drawing.Size(206, 45);
             this.buttonPhotos_LVI.TabIndex = 5;
             this.buttonPhotos_LVI.Text = "   Фото";
             this.buttonPhotos_LVI.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.toolTipInfo_LVI.SetToolTip(this.buttonPhotos_LVI, "Фотографии университета");
             this.buttonPhotos_LVI.UseVisualStyleBackColor = true;
             this.buttonPhotos_LVI.Click += new System.EventHandler(this.buttonPhotos_LVI_Click);
             // 
@@ -111,6 +114,7 @@ namespace Tyuiu.LomakinVI.Sprint7.Project.V3
             this.buttonMap_LVI.TabIndex = 4;
             this.buttonMap_LVI.Text = "   Карта";
             this.buttonMap_LVI.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.toolTipInfo_LVI.SetToolTip(this.buttonMap_LVI, "Карта этажей 7-го корпуса");
             this.buttonMap_LVI.UseVisualStyleBackColor = true;
             this.buttonMap_LVI.Click += new System.EventHandler(this.buttonMap_LVI_Click);
             // 
@@ -131,6 +135,7 @@ namespace Tyuiu.LomakinVI.Sprint7.Project.V3
             this.buttonTiming_LVI.TabIndex = 3;
             this.buttonTiming_LVI.Text = "   Расписание";
             this.buttonTiming_LVI.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.toolTipInfo_LVI.SetToolTip(this.buttonTiming_LVI, "Учебное расписание для разных групп");
             this.buttonTiming_LVI.UseVisualStyleBackColor = true;
             this.buttonTiming_LVI.Click += new System.EventHandler(this.buttonTiming_LVI_Click);
             // 
@@ -151,6 +156,7 @@ namespace Tyuiu.LomakinVI.Sprint7.Project.V3
             this.buttonSubjects_LVI.TabIndex = 2;
             this.buttonSubjects_LVI.Text = "   Предметы ";
             this.buttonSubjects_LVI.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.toolTipInfo_LVI.SetToolTip(this.buttonSubjects_LVI, "Список преподаваемых дисциплин");
             this.buttonSubjects_LVI.UseVisualStyleBackColor = true;
             this.buttonSubjects_LVI.Click += new System.EventHandler(this.buttonSubjects_LVI_Click);
             // 
@@ -171,6 +177,7 @@ namespace Tyuiu.LomakinVI.Sprint7.Project.V3
             this.buttonTeachers_LVI.TabIndex = 1;
             this.buttonTeachers_LVI.Text = "  Преподаватели";
             this.buttonTeachers_LVI.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.toolTipInfo_LVI.SetToolTip(this.buttonTeachers_LVI, "Список преподавателей");
             this.buttonTeachers_LVI.UseVisualStyleBackColor = true;
             this.buttonTeachers_LVI.Click += new System.EventHandler(this.buttonTeachers_LVI_Click);
             // 
@@ -265,6 +272,7 @@ namespace Tyuiu.LomakinVI.Sprint7.Project.V3
             this.buttonCloseChildForm_LVI.Name = "buttonCloseChildForm_LVI";
             this.buttonCloseChildForm_LVI.Size = new System.Drawing.Size(69, 80);
             this.buttonCloseChildForm_LVI.TabIndex = 1;
+            this.toolTipInfo_LVI.SetToolTip(this.buttonCloseChildForm_LVI, "Вернуться в главное меню");
             this.buttonCloseChildForm_LVI.UseVisualStyleBackColor = true;
             this.buttonCloseChildForm_LVI.Click += new System.EventHandler(this.buttonCloseChildForm_LVI_Click);
             // 
@@ -377,6 +385,12 @@ namespace Tyuiu.LomakinVI.Sprint7.Project.V3
             this.labelWelcomeHome_LVI.TabIndex = 0;
             this.labelWelcomeHome_LVI.Text = "Добро пожаловать!";
             // 
+            // toolTipInfo_LVI
+            // 
+            this.toolTipInfo_LVI.BackColor = System.Drawing.Color.White;
+            this.toolTipInfo_LVI.IsBalloon = true;
+            this.toolTipInfo_LVI.ToolTipTitle = "Подсказка";
+            // 
             // FormMainMenu_LVI
             // 
             this.AcceptButton = this.buttonClose_LVI;
@@ -423,6 +437,7 @@ namespace Tyuiu.LomakinVI.Sprint7.Project.V3
         private System.Windows.Forms.Button buttonInformation_LVI;
         private System.Windows.Forms.Button buttonTutorial_LVI;
         private System.Windows.Forms.Label labelMenu_LVI;
+        private System.Windows.Forms.ToolTip toolTipInfo_LVI;
     }
 }
 

@@ -16,5 +16,10 @@ namespace Tyuiu.LomakinVI.Sprint7.Project.V3.Forms
         {
             InitializeComponent();
         }
+
+        private void buttonOk_LVI_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

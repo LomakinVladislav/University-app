@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using Tyuiu.LomakinVI.Sprint7.Project.V3.Lib;
 
 namespace Tyuiu.LomakinVI.Sprint7.Project.V3.Forms
 {
@@ -20,34 +21,48 @@ namespace Tyuiu.LomakinVI.Sprint7.Project.V3.Forms
 
         private void buttonDone_LVI_Click(object sender, EventArgs e)
         {
-            string path = $@"{Directory.GetCurrentDirectory()}\Files\Teachers.csv";
-
-            string fileData = File.ReadAllText(path);
-            fileData = fileData.Replace('\n', '\r');
-            string[] lines = fileData.Split(new char[] { '\r' }, StringSplitOptions.RemoveEmptyEntries);
-
-            int rows = lines.Length;
-            int columns = lines[0].Split(',').Length;
-            string[,] arrayValues = new string[rows, columns];
-
-            for (int r = 0; r < rows; r++)
+            try
             {
-                string[] line_r = lines[r].Split(',');
-                for (int c = 0; c < columns; c++)
+                string path;
+                DataService ds = new DataService();
+
+                switch (comboBoxKaphedra_LVI.SelectedIndex)
                 {
-                    arrayValues[r, c] = Convert.ToString(line_r[c]);
+                    case 0:
+                        path = $@"{Directory.GetCurrentDirectory()}\Files\Teachers_Sport.csv";
+                        break;
+                    case 1:
+                        path = $@"{Directory.GetCurrentDirectory()}\Files\Teachers_MiPIT.csv";
+                        break;
+                    case 2:
+                        path = $@"{Directory.GetCurrentDirectory()}\Files\Teachers_Gum.csv";
+                        break;
+                    case 3:
+                        path = $@"{Directory.GetCurrentDirectory()}\Files\Teachers_All.csv";
+                        break;
+                    default:
+                        path = $@"{Directory.GetCurrentDirectory()}\Files\Teachers_All.csv";
+                        break;
+                }
+                string[,] arrayValues = ds.LoadFromData(path);
+
+                int rows = arrayValues.GetLength(0);
+                int columns = arrayValues.GetLength(1);
+
+                dataGridViewTachers_LVI.ColumnCount = columns;
+                dataGridViewTachers_LVI.RowCount = rows;
+
+                for (int r = 0; r < rows; r++)
+                {
+                    for (int c = 0; c < columns; c++)
+                    {
+                        dataGridViewTachers_LVI.Rows[r].Cells[c].Value = arrayValues[r, c];
+                    }
                 }
             }
-
-            dataGridViewTachers_LVI.ColumnCount = columns;
-            dataGridViewTachers_LVI.RowCount = rows;
-
-            for (int r = 0; r < rows; r++)
+            catch 
             {
-                for (int c = 0; c < columns; c++)
-                {
-                    dataGridViewTachers_LVI.Rows[r].Cells[c].Value = arrayValues[r, c];
-                }
+                MessageBox.Show("Исходный файл открыт в стороннем приложении!", "Ошибка",MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

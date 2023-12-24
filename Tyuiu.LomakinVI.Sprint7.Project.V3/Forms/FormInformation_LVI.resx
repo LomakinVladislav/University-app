@@ -117,4 +117,16 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="textBoxInfo_LVI.Text" xml:space="preserve">
+    <value>Разработчик: Ломакин Владислав Игоревич
+Группа ИИПб-23-1
+
+Программа разработана в рамаках изучения языка C#
+
+Тюменский Индустриальны Университет (с) 2023
+Высшая Школа Цифровых Технологий (с) 2023
+
+Внутреннее имя: Tyuiu.LomakinVI.Sprint7.Project.V3
+</value>
+  </data>
 </root>
